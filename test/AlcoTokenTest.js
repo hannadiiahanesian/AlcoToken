@@ -162,11 +162,11 @@ contract("AlcoToken", (accounts) => {
     });
 
     it("6.2.Should return 0 for non-minting address", async () => {
-      const nonMinitngBalance = await contract.balanceOf.call(noMintingAddress);
+      const noMintingBalance = await contract.balanceOf.call(noMintingAddress);
       assert.equal(
-        nonMinitngBalance,
+        noMintingBalance,
         0,
-        `Came back ${nonMinitngBalance} for balance of ${noMintingAddress}`
+        `Came back ${noMintingBalance} for balance of ${noMintingAddress}`
       );
     });
 
